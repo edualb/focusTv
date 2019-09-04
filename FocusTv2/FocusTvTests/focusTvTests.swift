@@ -1,15 +1,15 @@
 //
-//  FocusTvTests.swift
-//  FocusTvTests
+//  focusTvTests.swift
+//  focusTvTests
 //
-//  Created by eduardo.silva on 04/09/19.
+//  Created by eduardo.silva on 03/09/19.
 //  Copyright © 2019 eduardo.silva. All rights reserved.
 //
 
 import XCTest
-@testable import FocusTv
+@testable import focusTv
 
-class FocusTvTests: XCTestCase {
+class focusTvTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
