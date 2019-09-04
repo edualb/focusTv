@@ -24,7 +24,21 @@ class FocusTv: FocusTvProtocol {
     
     func toUIFocusGuide() -> UIFocusGuide {
         if (self.destinyLargerOriginAxisX() && self.destinyLargerOriginAxisY()) {
+            let focus = UIFocusGuide()
+            focus.widthAnchor
+                .constraint(equalTo: self.destinyView.widthAnchor)
+                .isActive = true
+            focus.heightAnchor
+                .constraint(equalTo: self.originView.heightAnchor)
+                .isActive = true
+            focus.topAnchor
+                .constraint(equalTo: self.originView.topAnchor)
+                .isActive = true
+            focus.leftAnchor
+                .constraint(equalTo: self.destinyView.leftAnchor)
+                .isActive = true
             print("destinyLargerOriginAxisX && destinyLargerOriginAxisY")
+            return focus
         }
         return UIFocusGuide()
     }
