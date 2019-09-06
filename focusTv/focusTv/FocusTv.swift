@@ -11,6 +11,7 @@ import Foundation
 protocol FocusTvProtocol {
     func toBottomRightUIFocusGuide(view: UIView) -> UIFocusGuide
     func toBottomLeftUIFocusGuide(view: UIView) -> UIFocusGuide
+    func toTopLeftUIFocusGuide(view: UIView) -> UIFocusGuide
 }
 
 public class FocusTv: FocusTvProtocol {
@@ -37,6 +38,15 @@ public class FocusTv: FocusTvProtocol {
             return QuadrantBottomLeft.toUIFocusGuide(origin: self.originView, destiny: self.destinyView, view: view)
         } else if (self.isOriginAxisXLesserAndAxisYLesser()) {
             return QuadrantBottomLeft.toUIFocusGuide(origin: self.destinyView, destiny: self.originView, view: view)
+        }
+        return UIFocusGuide()
+    }
+    
+    public func toTopLeftUIFocusGuide(view: UIView) -> UIFocusGuide {
+        if (self.isOriginAxisXLesserAndAxisYLarger()) {
+            return QuadrantTopLeft.toUIFocusGuide(origin: self.originView, destiny: self.destinyView, view: view)
+        } else if (self.isOriginAxisXLargerAndAxisYLesser()) {
+            return QuadrantTopLeft.toUIFocusGuide(origin: self.destinyView, destiny: self.originView, view: view)
         }
         return UIFocusGuide()
     }

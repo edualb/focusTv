@@ -14,11 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var destinyButton: UIButton!
     @IBOutlet weak var originButton: UIButton!
     
-    private var focusGuide: UIFocusGuide? = nil;
+    private var focusGuideBottomRight: UIFocusGuide? = nil;
+    private var focusGuideTopLeft: UIFocusGuide? = nil;
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.focusGuide = FocusTv(origin: destinyButton, destiny: originButton).toBottomRightUIFocusGuide(view: self.view)
+        self.focusGuideBottomRight = FocusTv(origin: destinyButton, destiny: originButton).toBottomRightUIFocusGuide(view: self.view)
+        self.focusGuideTopLeft = FocusTv(origin: destinyButton, destiny: originButton).toTopLeftUIFocusGuide(view: self.view)
         originButton.backgroundColor = .red
         destinyButton.backgroundColor = .green
     }
@@ -30,11 +32,14 @@ class ViewController: UIViewController {
         
         switch nextFocusedView {
         case self.destinyButton:
-            self.focusGuide?.preferredFocusEnvironments = [self.originButton]
+            self.focusGuideBottomRight?.preferredFocusEnvironments = [self.originButton]
+            self.focusGuideTopLeft?.preferredFocusEnvironments = [self.originButton]
         case self.originButton:
-            self.focusGuide?.preferredFocusEnvironments = [self.destinyButton]
+            self.focusGuideBottomRight?.preferredFocusEnvironments = [self.destinyButton]
+            self.focusGuideTopLeft?.preferredFocusEnvironments = [self.destinyButton]
         default:
-            self.focusGuide?.preferredFocusEnvironments = nil
+            self.focusGuideBottomRight?.preferredFocusEnvironments = nil
+            self.focusGuideTopLeft?.preferredFocusEnvironments = nil
         }
     }
 

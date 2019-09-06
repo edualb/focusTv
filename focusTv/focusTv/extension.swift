@@ -20,4 +20,16 @@ extension UIFocusGuide {
             .constraint(equalTo: origin.topAnchor)
             .isActive = true
     }
+    
+    func configTopQuadrantWithoutSideAnchor(origin: UIView, destiny: UIView) {
+        self.widthAnchor
+            .constraint(equalTo: origin.widthAnchor)
+            .isActive = true
+        self.heightAnchor
+            .constraint(equalTo: destiny.heightAnchor)
+            .isActive = true
+        self.topAnchor
+            .constraint(equalTo: destiny.topAnchor)
+            .isActive = true
+    }
 }
