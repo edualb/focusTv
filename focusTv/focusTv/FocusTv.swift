@@ -44,22 +44,18 @@ public class FocusTv: FocusTvProtocol {
     }
     
     private func getOriginAxisX() -> Float {
-        print("Origin X: \(self.originView.frame.origin.x)")
         return Float(self.originView.frame.origin.x)
     }
     
     private func getOriginAxisY() -> Float {
-        print("Origin Y: \(self.originView.frame.origin.y)")
         return Float(self.originView.frame.origin.y)
     }
     
     private func getDestinyAxisX() -> Float {
-        print("Destiny X: \(self.destinyView.frame.origin.x)")
         return Float(self.destinyView.frame.origin.x)
     }
     
     private func getDestinyAxisY() -> Float {
-        print("Destiny Y: \(self.destinyView.frame.origin.y)")
         return Float(self.destinyView.frame.origin.y)
     }
     
