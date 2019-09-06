@@ -1,5 +1,5 @@
 //
-//  quadrantBottomRight.swift
+//  QuadrantBottomLeft.swift
 //  FocusTv
 //
 //  Created by eduardo.silva on 06/09/19.
@@ -8,12 +8,11 @@
 
 import Foundation
 
-final class QuadrantBottomRight: QuadrantProtocol {
+final class QuadrantBottomLeft: QuadrantProtocol {
     
     static func toUIFocusGuide(origin: UIView, destiny: UIView, view: UIView) -> UIFocusGuide {
         let focus = UIFocusGuide()
         view.addLayoutGuide(focus)
-        
         focus.configBottomQuadrantWithoutSideAnchor(origin: origin, destiny: destiny)
 //        focus.widthAnchor
 //            .constraint(equalTo: destiny.widthAnchor)
@@ -24,8 +23,8 @@ final class QuadrantBottomRight: QuadrantProtocol {
 //        focus.topAnchor
 //            .constraint(equalTo: origin.topAnchor)
 //            .isActive = true
-        focus.leftAnchor
-            .constraint(equalTo: destiny.leftAnchor)
+        focus.rightAnchor
+            .constraint(equalTo: destiny.rightAnchor)
             .isActive = true
         return focus
     }

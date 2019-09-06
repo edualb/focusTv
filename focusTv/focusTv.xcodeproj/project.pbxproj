@@ -19,6 +19,8 @@
 		ED4405C823200A9100939EA6 /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4405C723200A9100939EA6 /* ExampleUITests.swift */; };
 		ED74501C2322B27600A82533 /* QuadrantBottomRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED74501B2322B27600A82533 /* QuadrantBottomRight.swift */; };
 		ED74501E2322B2D200A82533 /* QuadrantProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED74501D2322B2D200A82533 /* QuadrantProtocol.swift */; };
+		ED7450202322C25B00A82533 /* QuadrantBottomLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED74501F2322C25B00A82533 /* QuadrantBottomLeft.swift */; };
+		ED7450222322C39D00A82533 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7450212322C39D00A82533 /* extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		ED4405C923200A9100939EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED74501B2322B27600A82533 /* QuadrantBottomRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadrantBottomRight.swift; sourceTree = "<group>"; };
 		ED74501D2322B2D200A82533 /* QuadrantProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadrantProtocol.swift; sourceTree = "<group>"; };
+		ED74501F2322C25B00A82533 /* QuadrantBottomLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadrantBottomLeft.swift; sourceTree = "<group>"; };
+		ED7450212322C39D00A82533 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = extension.swift; path = ../../focusTv/focusTv/extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 				ED44058B2320097300939EA6 /* FocusTv.h */,
 				ED44058C2320097300939EA6 /* Info.plist */,
 				ED4405A22320099500939EA6 /* FocusTv.swift */,
+				ED7450212322C39D00A82533 /* extension.swift */,
 			);
 			path = FocusTv;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 			children = (
 				ED74501B2322B27600A82533 /* QuadrantBottomRight.swift */,
 				ED74501D2322B2D200A82533 /* QuadrantProtocol.swift */,
+				ED74501F2322C25B00A82533 /* QuadrantBottomLeft.swift */,
 			);
 			path = quadrantFocus;
 			sourceTree = "<group>";
@@ -403,6 +409,8 @@
 				ED4405A32320099500939EA6 /* FocusTv.swift in Sources */,
 				ED74501C2322B27600A82533 /* QuadrantBottomRight.swift in Sources */,
 				ED74501E2322B2D200A82533 /* QuadrantProtocol.swift in Sources */,
+				ED7450222322C39D00A82533 /* extension.swift in Sources */,
+				ED7450202322C25B00A82533 /* QuadrantBottomLeft.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
