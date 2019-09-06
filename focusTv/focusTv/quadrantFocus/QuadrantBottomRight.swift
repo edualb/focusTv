@@ -10,7 +10,7 @@ import Foundation
 
 final class QuadrantBottomRight: QuadrantProtocol {
     
-    func toUIFocusGuide(origin: UIView, destiny: UIView, view: UIView) -> UIFocusGuide {
+    static func toUIFocusGuide(origin: UIView, destiny: UIView, view: UIView) -> UIFocusGuide {
         let focus = UIFocusGuide()
         view.addLayoutGuide(focus)
         

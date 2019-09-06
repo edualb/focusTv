@@ -9,5 +9,5 @@
 import Foundation
 
 protocol QuadrantProtocol {
-    func toUIFocusGuide(origin: UIView, destiny: UIView, view: UIView) -> UIFocusGuide
+    static func toUIFocusGuide(origin: UIView, destiny: UIView, view: UIView) -> UIFocusGuide
 }

@@ -24,7 +24,7 @@ public class FocusTv: FocusTvProtocol {
     
     public func toUIFocusGuide(view: UIView) -> UIFocusGuide {
         if (self.destinyLargerOriginAxisX() && self.destinyLesserOriginAxisY()) {
-            return QuadrantBottomRight().toUIFocusGuide(origin: self.originView, destiny: self.destinyView, view: view)
+            return QuadrantBottomRight.toUIFocusGuide(origin: self.originView, destiny: self.destinyView, view: view)
         }
         return UIFocusGuide()
     }
