@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         self.view.addSubview(originButton)
         self.view.addSubview(destinyButton)
         self.focusGuide = FocusTv(origin: originButton, destiny: destinyButton).toUIFocusGuide(view: self.view)
-        print("VIEWCONTROLLER: \(originButton.topAnchor.accessibilityActivationPoint)")
         originButton.backgroundColor = .red
         destinyButton.backgroundColor = .green
     }

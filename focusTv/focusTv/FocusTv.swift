@@ -23,24 +23,10 @@ public class FocusTv: FocusTvProtocol {
     }
     
     public func toUIFocusGuide(view: UIView) -> UIFocusGuide {
-        let focus = UIFocusGuide()
-        view.addLayoutGuide(focus)
-        if (self.destinyLargerOriginAxisX() && self.destinyLessOriginAxisY()) {
-            focus.widthAnchor
-                .constraint(equalTo: self.destinyView.widthAnchor)
-                .isActive = true
-            focus.heightAnchor
-                .constraint(equalTo: self.originView.heightAnchor)
-                .isActive = true
-            focus.topAnchor
-                .constraint(equalTo: self.originView.topAnchor)
-                .isActive = true
-            focus.leftAnchor
-                .constraint(equalTo: self.destinyView.leftAnchor)
-                .isActive = true
-            return focus
+        if (self.destinyLargerOriginAxisX() && self.destinyLesserOriginAxisY()) {
+            return QuadrantBottomRight().toUIFocusGuide(origin: self.originView, destiny: self.destinyView, view: view)
         }
-        return focus
+        return UIFocusGuide()
     }
     
     private func getOriginAxisX() -> Float {
@@ -67,11 +53,11 @@ public class FocusTv: FocusTvProtocol {
         return self.getDestinyAxisY() > self.getOriginAxisY()
     }
     
-    private func destinyLessOriginAxisY() -> Bool {
+    private func destinyLesserOriginAxisY() -> Bool {
         return self.getDestinyAxisY() < self.getOriginAxisY()
     }
     
-    private func destinyLessOriginAxisX() -> Bool {
+    private func destinyLesserOriginAxisX() -> Bool {
         return self.getDestinyAxisX() < self.getOriginAxisX()
     }
     
