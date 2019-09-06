@@ -9,7 +9,8 @@
 import Foundation
 
 protocol FocusTvProtocol {
-    func toUIFocusGuide(view: UIView) -> UIFocusGuide
+    func toBottomRightUIFocusGuide(view: UIView) -> UIFocusGuide
+    func toBottomLeftUIFocusGuide(view: UIView) -> UIFocusGuide
 }
 
 public class FocusTv: FocusTvProtocol {
@@ -22,11 +23,20 @@ public class FocusTv: FocusTvProtocol {
         self.destinyView = destiny
     }
     
-    public func toUIFocusGuide(view: UIView) -> UIFocusGuide {
-        if (self.destinyLargerOriginAxisX() && self.destinyLesserOriginAxisY()) {
+    public func toBottomRightUIFocusGuide(view: UIView) -> UIFocusGuide {
+        if (self.isOriginAxisXLesserAndAxisYLarger()) {
             return QuadrantBottomRight.toUIFocusGuide(origin: self.originView, destiny: self.destinyView, view: view)
-        } else if (self.destinyLesserOriginAxisX() && self.destinyLesserOriginAxisY()) {
+        } else if (self.isOriginAxisXLargerAndAxisYLesser()) {
+            return QuadrantBottomRight.toUIFocusGuide(origin: self.destinyView, destiny: self.originView, view: view)
+        }
+        return UIFocusGuide()
+    }
+    
+    public func toBottomLeftUIFocusGuide(view: UIView) -> UIFocusGuide {
+        if (self.isOriginAxisXLargerAndAxisYLarger()) {
             return QuadrantBottomLeft.toUIFocusGuide(origin: self.originView, destiny: self.destinyView, view: view)
+        } else if (self.isOriginAxisXLesserAndAxisYLesser()) {
+            return QuadrantBottomLeft.toUIFocusGuide(origin: self.destinyView, destiny: self.originView, view: view)
         }
         return UIFocusGuide()
     }
@@ -61,6 +71,22 @@ public class FocusTv: FocusTvProtocol {
     
     private func destinyLesserOriginAxisX() -> Bool {
         return self.getDestinyAxisX() < self.getOriginAxisX()
+    }
+    
+    private func isOriginAxisXLesserAndAxisYLarger() -> Bool {
+        return self.destinyLargerOriginAxisX() && self.destinyLesserOriginAxisY()
+    }
+    
+    private func isOriginAxisXLargerAndAxisYLesser() -> Bool {
+        return self.destinyLesserOriginAxisX() && self.destinyLargerOriginAxisY()
+    }
+    
+    private func isOriginAxisXLargerAndAxisYLarger() -> Bool {
+        return self.destinyLesserOriginAxisX() && self.destinyLesserOriginAxisY()
+    }
+    
+    private func isOriginAxisXLesserAndAxisYLesser() -> Bool {
+        return self.destinyLargerOriginAxisX() && self.destinyLargerOriginAxisY()
     }
     
 }

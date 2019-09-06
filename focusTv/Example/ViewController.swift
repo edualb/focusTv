@@ -18,9 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(originButton)
-        self.view.addSubview(destinyButton)
-        self.focusGuide = FocusTv(origin: originButton, destiny: destinyButton).toUIFocusGuide(view: self.view)
+        self.focusGuide = FocusTv(origin: destinyButton, destiny: originButton).toBottomRightUIFocusGuide(view: self.view)
         originButton.backgroundColor = .red
         destinyButton.backgroundColor = .green
     }
