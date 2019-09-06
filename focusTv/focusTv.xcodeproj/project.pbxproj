@@ -10,6 +10,13 @@
 		ED4405922320097300939EA6 /* FocusTv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4405882320097300939EA6 /* FocusTv.framework */; };
 		ED4405972320097300939EA6 /* FocusTvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4405962320097300939EA6 /* FocusTvTests.swift */; };
 		ED4405992320097300939EA6 /* FocusTv.h in Headers */ = {isa = PBXBuildFile; fileRef = ED44058B2320097300939EA6 /* FocusTv.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED4405A32320099500939EA6 /* FocusTv.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4405A22320099500939EA6 /* FocusTv.swift */; };
+		ED4405AB23200A8F00939EA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4405AA23200A8F00939EA6 /* AppDelegate.swift */; };
+		ED4405AD23200A8F00939EA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4405AC23200A8F00939EA6 /* ViewController.swift */; };
+		ED4405B023200A8F00939EA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4405AE23200A8F00939EA6 /* Main.storyboard */; };
+		ED4405B223200A9100939EA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4405B123200A9100939EA6 /* Assets.xcassets */; };
+		ED4405BD23200A9100939EA6 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4405BC23200A9100939EA6 /* ExampleTests.swift */; };
+		ED4405C823200A9100939EA6 /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4405C723200A9100939EA6 /* ExampleUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,6 +27,20 @@
 			remoteGlobalIDString = ED4405872320097300939EA6;
 			remoteInfo = FocusTv;
 		};
+		ED4405B923200A9100939EA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED44057F2320097300939EA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED4405A723200A8F00939EA6;
+			remoteInfo = Example;
+		};
+		ED4405C423200A9100939EA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED44057F2320097300939EA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED4405A723200A8F00939EA6;
+			remoteInfo = Example;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +50,19 @@
 		ED4405912320097300939EA6 /* FocusTvTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusTvTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4405962320097300939EA6 /* FocusTvTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTvTests.swift; sourceTree = "<group>"; };
 		ED4405982320097300939EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED4405A22320099500939EA6 /* FocusTv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTv.swift; sourceTree = "<group>"; };
+		ED4405A823200A8F00939EA6 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED4405AA23200A8F00939EA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED4405AC23200A8F00939EA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED4405AF23200A8F00939EA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED4405B123200A9100939EA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED4405B323200A9100939EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED4405B823200A9100939EA6 /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED4405BC23200A9100939EA6 /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
+		ED4405BE23200A9100939EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED4405C323200A9100939EA6 /* ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED4405C723200A9100939EA6 /* ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITests.swift; sourceTree = "<group>"; };
+		ED4405C923200A9100939EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +81,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED4405A523200A8F00939EA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED4405B523200A9100939EA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED4405C023200A9100939EA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,7 +110,11 @@
 			children = (
 				ED44058A2320097300939EA6 /* FocusTv */,
 				ED4405952320097300939EA6 /* FocusTvTests */,
+				ED4405A923200A8F00939EA6 /* Example */,
+				ED4405BB23200A9100939EA6 /* ExampleTests */,
+				ED4405C623200A9100939EA6 /* ExampleUITests */,
 				ED4405892320097300939EA6 /* Products */,
+				ED4405D323200CDC00939EA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +123,9 @@
 			children = (
 				ED4405882320097300939EA6 /* FocusTv.framework */,
 				ED4405912320097300939EA6 /* FocusTvTests.xctest */,
+				ED4405A823200A8F00939EA6 /* Example.app */,
+				ED4405B823200A9100939EA6 /* ExampleTests.xctest */,
+				ED4405C323200A9100939EA6 /* ExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +135,7 @@
 			children = (
 				ED44058B2320097300939EA6 /* FocusTv.h */,
 				ED44058C2320097300939EA6 /* Info.plist */,
+				ED4405A22320099500939EA6 /* FocusTv.swift */,
 			);
 			path = FocusTv;
 			sourceTree = "<group>";
@@ -84,6 +147,43 @@
 				ED4405982320097300939EA6 /* Info.plist */,
 			);
 			path = FocusTvTests;
+			sourceTree = "<group>";
+		};
+		ED4405A923200A8F00939EA6 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				ED4405AA23200A8F00939EA6 /* AppDelegate.swift */,
+				ED4405AC23200A8F00939EA6 /* ViewController.swift */,
+				ED4405AE23200A8F00939EA6 /* Main.storyboard */,
+				ED4405B123200A9100939EA6 /* Assets.xcassets */,
+				ED4405B323200A9100939EA6 /* Info.plist */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		ED4405BB23200A9100939EA6 /* ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED4405BC23200A9100939EA6 /* ExampleTests.swift */,
+				ED4405BE23200A9100939EA6 /* Info.plist */,
+			);
+			path = ExampleTests;
+			sourceTree = "<group>";
+		};
+		ED4405C623200A9100939EA6 /* ExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED4405C723200A9100939EA6 /* ExampleUITests.swift */,
+				ED4405C923200A9100939EA6 /* Info.plist */,
+			);
+			path = ExampleUITests;
+			sourceTree = "<group>";
+		};
+		ED4405D323200CDC00939EA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +236,59 @@
 			productReference = ED4405912320097300939EA6 /* FocusTvTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		ED4405A723200A8F00939EA6 /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED4405CA23200A9100939EA6 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				ED4405A423200A8F00939EA6 /* Sources */,
+				ED4405A523200A8F00939EA6 /* Frameworks */,
+				ED4405A623200A8F00939EA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Example;
+			productName = Example;
+			productReference = ED4405A823200A8F00939EA6 /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED4405B723200A9100939EA6 /* ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED4405CD23200A9100939EA6 /* Build configuration list for PBXNativeTarget "ExampleTests" */;
+			buildPhases = (
+				ED4405B423200A9100939EA6 /* Sources */,
+				ED4405B523200A9100939EA6 /* Frameworks */,
+				ED4405B623200A9100939EA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED4405BA23200A9100939EA6 /* PBXTargetDependency */,
+			);
+			name = ExampleTests;
+			productName = ExampleTests;
+			productReference = ED4405B823200A9100939EA6 /* ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED4405C223200A9100939EA6 /* ExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED4405D023200A9100939EA6 /* Build configuration list for PBXNativeTarget "ExampleUITests" */;
+			buildPhases = (
+				ED4405BF23200A9100939EA6 /* Sources */,
+				ED4405C023200A9100939EA6 /* Frameworks */,
+				ED4405C123200A9100939EA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED4405C523200A9100939EA6 /* PBXTargetDependency */,
+			);
+			name = ExampleUITests;
+			productName = ExampleUITests;
+			productReference = ED4405C323200A9100939EA6 /* ExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -148,9 +301,21 @@
 				TargetAttributes = {
 					ED4405872320097300939EA6 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					ED4405902320097300939EA6 = {
 						CreatedOnToolsVersion = 10.3;
+					};
+					ED4405A723200A8F00939EA6 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					ED4405B723200A9100939EA6 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = ED4405A723200A8F00939EA6;
+					};
+					ED4405C223200A9100939EA6 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = ED4405A723200A8F00939EA6;
 					};
 				};
 			};
@@ -160,6 +325,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = ED44057E2320097300939EA6;
 			productRefGroup = ED4405892320097300939EA6 /* Products */;
@@ -168,6 +334,9 @@
 			targets = (
 				ED4405872320097300939EA6 /* FocusTv */,
 				ED4405902320097300939EA6 /* FocusTvTests */,
+				ED4405A723200A8F00939EA6 /* Example */,
+				ED4405B723200A9100939EA6 /* ExampleTests */,
+				ED4405C223200A9100939EA6 /* ExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +356,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED4405A623200A8F00939EA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED4405B223200A9100939EA6 /* Assets.xcassets in Resources */,
+				ED4405B023200A8F00939EA6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED4405B623200A9100939EA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED4405C123200A9100939EA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -194,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4405A32320099500939EA6 /* FocusTv.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +398,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED4405A423200A8F00939EA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED4405AD23200A8F00939EA6 /* ViewController.swift in Sources */,
+				ED4405AB23200A8F00939EA6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED4405B423200A9100939EA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED4405BD23200A9100939EA6 /* ExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED4405BF23200A9100939EA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED4405C823200A9100939EA6 /* ExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -213,7 +431,28 @@
 			target = ED4405872320097300939EA6 /* FocusTv */;
 			targetProxy = ED4405932320097300939EA6 /* PBXContainerItemProxy */;
 		};
+		ED4405BA23200A9100939EA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED4405A723200A8F00939EA6 /* Example */;
+			targetProxy = ED4405B923200A9100939EA6 /* PBXContainerItemProxy */;
+		};
+		ED4405C523200A9100939EA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED4405A723200A8F00939EA6 /* Example */;
+			targetProxy = ED4405C423200A9100939EA6 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED4405AE23200A8F00939EA6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED4405AF23200A8F00939EA6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		ED44059A2320097300939EA6 /* Debug */ = {
@@ -339,6 +578,7 @@
 		ED44059D2320097300939EA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -355,6 +595,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.focustv.FocusTv;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
@@ -363,6 +604,7 @@
 		ED44059E2320097300939EA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -387,6 +629,7 @@
 		ED4405A02320097300939EA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FocusTvTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +647,7 @@
 		ED4405A12320097300939EA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FocusTvTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -415,6 +659,120 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		ED4405CB23200A9100939EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.focustv.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		ED4405CC23200A9100939EA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.focustv.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		ED4405CE23200A9100939EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.focustv.ExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
+			};
+			name = Debug;
+		};
+		ED4405CF23200A9100939EA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.focustv.ExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
+			};
+			name = Release;
+		};
+		ED4405D123200A9100939EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.focustv.ExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = Example;
+			};
+			name = Debug;
+		};
+		ED4405D223200A9100939EA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.focustv.ExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = Example;
 			};
 			name = Release;
 		};
@@ -444,6 +802,33 @@
 			buildConfigurations = (
 				ED4405A02320097300939EA6 /* Debug */,
 				ED4405A12320097300939EA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED4405CA23200A9100939EA6 /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED4405CB23200A9100939EA6 /* Debug */,
+				ED4405CC23200A9100939EA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED4405CD23200A9100939EA6 /* Build configuration list for PBXNativeTarget "ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED4405CE23200A9100939EA6 /* Debug */,
+				ED4405CF23200A9100939EA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED4405D023200A9100939EA6 /* Build configuration list for PBXNativeTarget "ExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED4405D123200A9100939EA6 /* Debug */,
+				ED4405D223200A9100939EA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
