@@ -7,12 +7,38 @@
 //
 
 import UIKit
+import FocusTv
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var destinyButton: UIButton!
+    @IBOutlet weak var originButton: UIButton!
+    
+    private var focusGuide: UIFocusGuide? = nil;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.view.addSubview(originButton)
+        self.view.addSubview(destinyButton)
+        self.focusGuide = FocusTv(origin: originButton, destiny: destinyButton).toUIFocusGuide(view: self.view)
+        print("VIEWCONTROLLER: \(originButton.topAnchor.accessibilityActivationPoint)")
+        originButton.backgroundColor = .red
+        destinyButton.backgroundColor = .green
+    }
+    
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        super.didUpdateFocus(in: context, with: coordinator)
+        
+        guard let nextFocusedView = context.nextFocusedView else { return }
+        
+        switch nextFocusedView {
+        case self.destinyButton:
+            self.focusGuide?.preferredFocusEnvironments = [self.originButton]
+        case self.originButton:
+            self.focusGuide?.preferredFocusEnvironments = [self.destinyButton]
+        default:
+            self.focusGuide?.preferredFocusEnvironments = nil
+        }
     }
 
 
