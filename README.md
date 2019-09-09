@@ -7,7 +7,7 @@ Library to create a `UIFocusGuide` with simple syntax.
 
 ![Screen Shot 2019-09-09 at 16 56 11](https://user-images.githubusercontent.com/39157101/64562178-c0e39580-d322-11e9-9ff3-8b669d5f804e.png)
 
-* A code without FocusTv framework:
+* A code **without** FocusTv framework:
 
 ```swift
 import UIKit
@@ -41,6 +41,32 @@ class ViewController: UIViewController {
         default:
             self.focusGuideBottomRight.preferredFocusEnvironments = nil
       }
+    }
+}
+```
+
+* A code **with** FocusTv framework:
+
+```swift
+import UIKit
+import FocusTv
+
+class ViewController: UIViewController {
+    @IBOutlet weak var destinyButton: UIButton!
+    @IBOutlet weak var originButton: UIButton!
+    
+    private var focusGuideBottomRight: FocusTv? = nil;
+    
+    override func viewDidLoad() {
+      super.viewDidLoad()
+      
+      self.focusGuideBottomRight = FocusTv(from: destinyButton, to: originButton)
+      self.focusGuideBottomRight?.toBottomRight(view: self.view)
+    }
+    
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+      super.didUpdateFocus(in: context, with: coordinator)
+      self.focusGuideBottomRight?.didUpdateFocus(in: context, with: coordinator)
     }
 }
 ```
