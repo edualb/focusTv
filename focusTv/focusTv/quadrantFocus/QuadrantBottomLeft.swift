@@ -15,8 +15,8 @@ final class QuadrantBottomLeft: QuadrantProtocol {
         view.addLayoutGuide(focus)
         
         focus.configBottomQuadrantWithoutSideAnchor(origin: origin, destiny: destiny)
-        focus.rightAnchor
-            .constraint(equalTo: destiny.rightAnchor)
+        focus.trailingAnchor
+            .constraint(equalTo: destiny.trailingAnchor)
             .isActive = true
         return focus
     }

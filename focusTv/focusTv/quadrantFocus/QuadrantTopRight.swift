@@ -15,8 +15,8 @@ final class QuadrantTopRight: QuadrantProtocol {
         view.addLayoutGuide(focus)
         
         focus.configTopQuadrantWithoutSideAnchor(origin: origin, destiny: destiny)
-        focus.leftAnchor
-            .constraint(equalTo: origin.leftAnchor)
+        focus.leadingAnchor
+            .constraint(equalTo: origin.leadingAnchor)
             .isActive = true
         return focus
     }
