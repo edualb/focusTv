@@ -9,10 +9,11 @@
 import Foundation
 
 protocol FocusTvProtocol {
-    func toBottomRight(view: UIView) -> UIFocusGuide
-    func toBottomLeft(view: UIView) -> UIFocusGuide
-    func toTopLeft(view: UIView) -> UIFocusGuide
-    func toTopRight(view: UIView) -> UIFocusGuide
+    func toBottomRight(view: UIView)
+    func toBottomLeft(view: UIView)
+    func toTopLeft(view: UIView)
+    func toTopRight(view: UIView)
+    func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator)
 }
 
 public final class FocusTv: FocusTvProtocol {
@@ -21,46 +22,55 @@ public final class FocusTv: FocusTvProtocol {
     private var destinyView: UIView
     private var focusGuide: UIFocusGuide
     
-    public init(origin: UIView, destiny: UIView, focusGuide: UIFocusGuide = UIFocusGuide()) {
+    public init(from origin: UIView, to destiny: UIView, focusGuide: UIFocusGuide = UIFocusGuide()) {
         self.originView = origin
         self.destinyView = destiny
         self.focusGuide = focusGuide
     }
     
-    public func toBottomRight(view: UIView) -> UIFocusGuide {
+    public func toBottomRight(view: UIView) {
         if (self.isOriginAxisXLesserAndAxisYLarger()) {
             self.focusGuide = QuadrantBottomRight.toUIFocusGuide(origin: self.originView, destiny: self.destinyView, view: view)
         } else if (self.isOriginAxisXLargerAndAxisYLesser()) {
             self.focusGuide = QuadrantBottomRight.toUIFocusGuide(origin: self.destinyView, destiny: self.originView, view: view)
         }
-        return self.focusGuide
     }
     
-    public func toBottomLeft(view: UIView) -> UIFocusGuide {
+    public func toBottomLeft(view: UIView) {
         if (self.isOriginAxisXLargerAndAxisYLarger()) {
             self.focusGuide = QuadrantBottomLeft.toUIFocusGuide(origin: self.originView, destiny: self.destinyView, view: view)
         } else if (self.isOriginAxisXLesserAndAxisYLesser()) {
             self.focusGuide = QuadrantBottomLeft.toUIFocusGuide(origin: self.destinyView, destiny: self.originView, view: view)
         }
-        return self.focusGuide
     }
     
-    public func toTopLeft(view: UIView) -> UIFocusGuide {
+    public func toTopLeft(view: UIView) {
         if (self.isOriginAxisXLesserAndAxisYLarger()) {
             self.focusGuide = QuadrantTopLeft.toUIFocusGuide(origin: self.originView, destiny: self.destinyView, view: view)
         } else if (self.isOriginAxisXLargerAndAxisYLesser()) {
             self.focusGuide = QuadrantTopLeft.toUIFocusGuide(origin: self.destinyView, destiny: self.originView, view: view)
         }
-        return self.focusGuide
     }
     
-    public func toTopRight(view: UIView) -> UIFocusGuide {
+    public func toTopRight(view: UIView) {
         if (self.isOriginAxisXLargerAndAxisYLarger()) {
             self.focusGuide = QuadrantTopRight.toUIFocusGuide(origin: self.originView, destiny: self.destinyView, view: view)
         } else if (self.isOriginAxisXLesserAndAxisYLesser()) {
             self.focusGuide = QuadrantTopRight.toUIFocusGuide(origin: self.destinyView, destiny: self.originView, view: view)
         }
-        return self.focusGuide
+    }
+    
+    public func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        guard let nextFocusedView = context.nextFocusedView else { return }
+        
+        switch nextFocusedView {
+        case self.destinyView:
+            self.focusGuide.preferredFocusEnvironments = [self.originView]
+        case self.originView:
+            self.focusGuide.preferredFocusEnvironments = [self.destinyView]
+        default:
+            self.focusGuide.preferredFocusEnvironments = nil
+        }
     }
     
     private func getOriginAxisX() -> Float {

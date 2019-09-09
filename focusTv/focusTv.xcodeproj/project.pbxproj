@@ -23,7 +23,6 @@
 		ED7450222322C39D00A82533 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7450212322C39D00A82533 /* extension.swift */; };
 		ED9B46032322E98300751781 /* QuadrantTopLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9B46022322E98300751781 /* QuadrantTopLeft.swift */; };
 		ED9B46052322EDC200751781 /* QuadrantTopRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9B46042322EDC200751781 /* QuadrantTopRight.swift */; };
-		ED9B46062326985800751781 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4405AC23200A8F00939EA6 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -419,7 +418,6 @@
 				ED9B46032322E98300751781 /* QuadrantTopLeft.swift in Sources */,
 				ED74501E2322B2D200A82533 /* QuadrantProtocol.swift in Sources */,
 				ED7450222322C39D00A82533 /* extension.swift in Sources */,
-				ED9B46062326985800751781 /* ViewController.swift in Sources */,
 				ED7450202322C25B00A82533 /* QuadrantBottomLeft.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
