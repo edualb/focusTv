@@ -1,5 +1,5 @@
 # FocusTv
-Library to create a `UIFocusGuide` with simple syntax.
+Framework to create a `UIFocusGuide` with simple syntax.
 
 ## Example
 
