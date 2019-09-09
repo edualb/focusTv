@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
       super.viewDidLoad()
       
-      self.focusGuideBottomRight = FocusTv(from: destinyButton, to: originButton)
+      self.focusGuideBottomRight = FocusTv(from: originButton, to: destinyButton)
       self.focusGuideBottomRight?.toBottomRight(view: self.view)
     }
     
