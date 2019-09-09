@@ -9,10 +9,10 @@
 import Foundation
 
 protocol FocusTvProtocol {
-    func toBottomRightUIFocusGuide(view: UIView) -> UIFocusGuide
-    func toBottomLeftUIFocusGuide(view: UIView) -> UIFocusGuide
-    func toTopLeftUIFocusGuide(view: UIView) -> UIFocusGuide
-    func toTopRightUIFocusGuide(view: UIView) -> UIFocusGuide
+    func toBottomRight(view: UIView) -> UIFocusGuide
+    func toBottomLeft(view: UIView) -> UIFocusGuide
+    func toTopLeft(view: UIView) -> UIFocusGuide
+    func toTopRight(view: UIView) -> UIFocusGuide
 }
 
 public class FocusTv: FocusTvProtocol {
@@ -25,7 +25,7 @@ public class FocusTv: FocusTvProtocol {
         self.destinyView = destiny
     }
     
-    public func toBottomRightUIFocusGuide(view: UIView) -> UIFocusGuide {
+    public func toBottomRight(view: UIView) -> UIFocusGuide {
         if (self.isOriginAxisXLesserAndAxisYLarger()) {
             return QuadrantBottomRight.toUIFocusGuide(origin: self.originView, destiny: self.destinyView, view: view)
         } else if (self.isOriginAxisXLargerAndAxisYLesser()) {
@@ -34,7 +34,7 @@ public class FocusTv: FocusTvProtocol {
         return UIFocusGuide()
     }
     
-    public func toBottomLeftUIFocusGuide(view: UIView) -> UIFocusGuide {
+    public func toBottomLeft(view: UIView) -> UIFocusGuide {
         if (self.isOriginAxisXLargerAndAxisYLarger()) {
             return QuadrantBottomLeft.toUIFocusGuide(origin: self.originView, destiny: self.destinyView, view: view)
         } else if (self.isOriginAxisXLesserAndAxisYLesser()) {
@@ -43,7 +43,7 @@ public class FocusTv: FocusTvProtocol {
         return UIFocusGuide()
     }
     
-    public func toTopLeftUIFocusGuide(view: UIView) -> UIFocusGuide {
+    public func toTopLeft(view: UIView) -> UIFocusGuide {
         if (self.isOriginAxisXLesserAndAxisYLarger()) {
             return QuadrantTopLeft.toUIFocusGuide(origin: self.originView, destiny: self.destinyView, view: view)
         } else if (self.isOriginAxisXLargerAndAxisYLesser()) {
@@ -52,7 +52,7 @@ public class FocusTv: FocusTvProtocol {
         return UIFocusGuide()
     }
     
-    public func toTopRightUIFocusGuide(view: UIView) -> UIFocusGuide {
+    public func toTopRight(view: UIView) -> UIFocusGuide {
         if (self.isOriginAxisXLargerAndAxisYLarger()) {
             return QuadrantTopRight.toUIFocusGuide(origin: self.originView, destiny: self.destinyView, view: view)
         } else if (self.isOriginAxisXLesserAndAxisYLesser()) {
