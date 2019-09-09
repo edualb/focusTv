@@ -70,3 +70,32 @@ class ViewController: UIViewController {
     }
 }
 ```
+
+## How does it work?
+
+1 - When a FocusTv object is create, we need pass two parameters, an origin UIView and a destiny UIView. In other words, we set in FocusTv object a view that is initiate focus and other view that will be final focus.
+
+```swift
+    self.focusGuideBottomRight = FocusTv(from: destinyButton, to: originButton)
+```
+
+2 - After FocusTv object was create, we need pass the quadrant that will be the focus:
+
+![Screen Shot 2019-09-09 at 16 56 11](https://user-images.githubusercontent.com/39157101/64563870-c04cfe00-d326-11e9-9602-1e5ea1df8914.png)
+
+In our case, we wanna get the **bottom right quadrant** because when we drag to right, the focus will get the bottom right quadrant. 
+
+For we do it, add this code:
+
+```swift
+    self.focusGuideBottomRight?.toBottomRight(view: self.view)
+```
+
+3 - And finally, for make the intelligent, we add `didUpdateFocus(in: context, with: coordinator)` method of FocusTv object into `override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator)` method. Like it:
+
+```swift
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+      super.didUpdateFocus(in: context, with: coordinator)
+      self.focusGuideBottomRight?.didUpdateFocus(in: context, with: coordinator)
+    }
+```
