@@ -1,13 +1,13 @@
 # FocusTv
-Framework to create a `UIFocusGuide` with simple syntax.
+A framework for creating `UIFocusGuide` elements with simple syntax.
 
 ## Example
 
-* The goals in this example is navigate from origin button to destiny button:
+* The goal of this example is navigate from an origin button to a destiny button:
 
 ![Screen Shot 2019-09-09 at 16 56 11](https://user-images.githubusercontent.com/39157101/64562178-c0e39580-d322-11e9-9ff3-8b669d5f804e.png)
 
-* A code **without** FocusTv framework:
+* **Without** FocusTv framework:
 
 ```swift
 import UIKit
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
 }
 ```
 
-* A code **with** FocusTv framework:
+* **With** FocusTv framework:
 
 ```swift
 import UIKit
@@ -73,25 +73,25 @@ class ViewController: UIViewController {
 
 ## How does it work?
 
-1 - When a FocusTv object is create, we need pass two parameters, an origin UIView and a destiny UIView. In other words, we set in FocusTv object a view that is initiate focus and other view that will be final focus.
+1 - When a FocusTv object is created, we need to pass two parameters: an origin UIView and a destiny UIView. In other words, we give the FocusTv object a view that is the initial focus and another view that will be the final focus.
 
 ```swift
     self.focusGuideBottomRight = FocusTv(from: destinyButton, to: originButton)
 ```
 
-2 - After FocusTv object was create, we need pass the quadrant that will be the focus:
+2 - After the FocusTv object is created, we need pass the quadrant that will be the focus:
 
 ![Screen Shot 2019-09-09 at 16 56 11](https://user-images.githubusercontent.com/39157101/64563870-c04cfe00-d326-11e9-9602-1e5ea1df8914.png)
 
-In our case, we wanna get the **bottom right quadrant** because when we drag to right, the focus will get the bottom right quadrant. 
+In our case, we want to pass the **bottom right quadrant** because when we drag to the right, the focus will go to the bottom right quadrant. 
 
-For we do it, add this code:
+To do this, add the following code:
 
 ```swift
     self.focusGuideBottomRight?.toBottomRight(view: self.view)
 ```
 
-3 - And finally, for make the intelligent, we add `didUpdateFocus(in: context, with: coordinator)` method of FocusTv object into `override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator)` method. Like it:
+3 - And finally, to make it intelligent we add the `didUpdateFocus(in: context, with: coordinator)` method of the FocusTv object into the `override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator)` method like this:
 
 ```swift
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
